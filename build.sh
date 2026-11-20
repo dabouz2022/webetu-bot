@@ -43,9 +43,9 @@ fi
 APKSIGNER_JAR="$LOCAL_BT/lib/apksigner.jar"
 
 # Step 1: Recompile
-echo -e "\n[*] Step 1/3: Recompiling 'decoded' with apktool..."
+echo -e "\n[*] Step 1/3: Recompiling 'src' with apktool..."
 rm -f "$SCRIPT_DIR/rebuilt.apk"
-"$JAVA_CMD" -jar "$APKTOOL_JAR" b "$SCRIPT_DIR/decoded" -o "$SCRIPT_DIR/rebuilt.apk"
+"$JAVA_CMD" -jar "$APKTOOL_JAR" b "$SCRIPT_DIR/src" -o "$SCRIPT_DIR/rebuilt.apk"
 
 # Step 2: 16KB Page Alignment
 echo -e "\n[*] Step 2/3: Aligning APK (16384 bytes)..."

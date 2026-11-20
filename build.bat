@@ -33,9 +33,9 @@ if exist "%SCRIPT_DIR%bt\android-14\zipalign.exe" (
 )
 set "APKSIGNER_JAR=%SCRIPT_DIR%bt\android-14\lib\apksigner.jar"
 
-echo [*] Step 1/3: Recompiling 'decoded' with apktool...
+echo [*] Step 1/3: Recompiling 'src' with apktool...
 if exist "%SCRIPT_DIR%rebuilt.apk" del "%SCRIPT_DIR%rebuilt.apk"
-"%JAVA_CMD%" -jar "%APKTOOL_JAR%" b "%SCRIPT_DIR%decoded" -o "%SCRIPT_DIR%rebuilt.apk"
+"%JAVA_CMD%" -jar "%APKTOOL_JAR%" b "%SCRIPT_DIR%src" -o "%SCRIPT_DIR%rebuilt.apk"
 if not exist "%SCRIPT_DIR%rebuilt.apk" (
     echo [-] Recompilation failed!
     exit /b 1

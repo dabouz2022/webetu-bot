@@ -207,7 +207,7 @@ webetu-work/
 ├── apktool.jar                  # Packaging tool
 ├── bot.keystore                 # Signing keystore
 │
-├── decoded/                     # Application source tree
+├── src/                         # Application integration source tree
 │   ├── AndroidManifest.xml      # Configured manifest with receivers and activities
 │   ├── apktool.yml              # Build specifications
 │   ├── smali_classes3/          # Integration hooks (MainApplication, MainActivity)
@@ -256,7 +256,7 @@ chmod +x build.sh
 
 ```bash
 # 1. Recompile source directory
-java -jar apktool.jar b decoded -o rebuilt.apk
+java -jar apktool.jar b src -o rebuilt.apk
 
 # 2. 16KB Page Alignment (Required for modern Android versions)
 bt/android-14/zipalign -p -f 16384 rebuilt.apk rebuilt_aligned.apk

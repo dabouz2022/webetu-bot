@@ -46,11 +46,11 @@ if (Test-Path "$LocalBt\zipalign.exe") {
 $ApkSignerJar = "$LocalBt\lib\apksigner.jar"
 
 # 4. Step 1: Recompile with Apktool
-Write-Host "`n[*] Step 1/3: Recompiling 'decoded' with apktool..." -ForegroundColor Yellow
+Write-Host "`n[*] Step 1/3: Recompiling 'src' with apktool..." -ForegroundColor Yellow
 $RebuiltApk = "$ScriptDir\rebuilt.apk"
 if (Test-Path $RebuiltApk) { Remove-Item -Force $RebuiltApk }
 
-& $JavaCmd -jar $ApktoolJar b "$ScriptDir\decoded" -o $RebuiltApk
+& $JavaCmd -jar $ApktoolJar b "$ScriptDir\src" -o $RebuiltApk
 if (-not (Test-Path $RebuiltApk)) {
     Write-Error "Apktool build failed!"
 }
