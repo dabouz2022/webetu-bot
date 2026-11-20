@@ -1,0 +1,57 @@
+# =============================================================================
+# Webetu Bot — Git Ignore Configuration
+# =============================================================================
+
+# Large Android Packages & Binaries (GitHub file limit is 100MB)
+*.apk
+*.idsig
+*.dex
+apktool.jar
+*.jar
+
+# Intermediate decompilation / build artifacts
+decoded/build/
+build/
+dist/
+rebuilt.apk
+rebuilt_aligned.apk
+
+# Android SDK Build Tools binaries (contain Windows/Linux executables & DLLs)
+bt/
+build-tools/
+
+# JDK / Java Distributions
+jdk-*/
+*.tar.gz
+*.zip
+
+# Signing Keystores & Private Certificates
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.pem
+bot.keystore
+
+# Local Secrets & Credentials
+.env
+*.env
+secrets.json
+
+# Temporary Test Files, UI Dumps & Screen Captures
+ui.xml
+s*.png
+*.tmp
+*.log
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE & OS Artifacts
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+ehthumbs.db
